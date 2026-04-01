@@ -67,7 +67,7 @@ const navItems = [
   { label: "Audit Trail", href: "/audit", icon: FileSearch },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => void }) {
   const pathname = usePathname();
   const [expanded, setExpanded] = useState<Record<string, boolean>>({
     Payroll: true,
@@ -85,7 +85,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-gradient-to-b from-[#0B2545] to-[#0a1f3a] text-white min-h-screen flex flex-col fixed left-0 top-0 z-40">
+    <aside className={`w-64 bg-gradient-to-b from-[#0B2545] to-[#0a1f3a] text-white min-h-screen flex flex-col fixed left-0 top-0 z-40 transition-transform duration-300 ${mobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
       <div className="p-5 border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gradient-to-br from-[#D4A843] to-[#c49632] rounded-xl flex items-center justify-center font-bold text-[#0B2545] text-lg shadow-lg shadow-[#D4A843]/20">
@@ -131,6 +131,7 @@ export default function Sidebar() {
                           <Link
                             key={child.href}
                             href={child.href}
+                            onClick={onClose}
                             className={`flex items-center gap-3 pl-5 pr-5 py-2 text-sm transition-all ${
                               isActive(child.href)
                                 ? "text-[#D4A843] bg-white/5"
@@ -154,6 +155,7 @@ export default function Sidebar() {
             <Link
               key={href}
               href={href}
+              onClick={onClose}
               className={`flex items-center gap-3 px-5 py-2.5 text-sm transition-all relative ${
                 isActive(href)
                   ? "text-[#D4A843] bg-white/5"
