@@ -163,7 +163,7 @@ export default function PayrollRunWizard() {
           {step === 2 && (
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Payroll Breakdown</h2>
-              <div className="grid grid-cols-4 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 {[
                   { label: "Total Gross", value: totalGross, color: "bg-[#0B2545]/5", textColor: "text-gray-900" },
                   { label: "Total Deductions", value: totalDeductions, color: "bg-red-50", textColor: "text-red-700" },
@@ -201,7 +201,7 @@ export default function PayrollRunWizard() {
             <div>
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Preview Payslips</h2>
               <p className="text-sm text-gray-500 mb-4">Click on an employee to preview their payslip.</p>
-              <div className="grid grid-cols-3 gap-3 max-h-[400px] overflow-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-h-[400px] overflow-auto">
                 {filtered.slice(0, 30).map((emp, i) => (
                   <motion.button
                     key={emp.id}

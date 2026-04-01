@@ -211,7 +211,7 @@ export default function IntegrationsPage() {
 
       {/* Overview Tab */}
       {activeTab === "overview" && (
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {integrations.map((i, idx) => (
             <motion.div key={i.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.1 }} className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-shadow shadow-sm">
               <div className="flex items-start justify-between mb-4">
@@ -288,6 +288,7 @@ export default function IntegrationsPage() {
             <h3 className="font-semibold text-gray-900">Sync History</h3>
             <span className="text-xs text-gray-500">{syncLogs.length} events</span>
           </div>
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
@@ -319,6 +320,7 @@ export default function IntegrationsPage() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
 
@@ -363,7 +365,7 @@ export default function IntegrationsPage() {
               <Database size={20} className="text-[#0B2545]" />
               <h3 className="font-semibold text-gray-900">API Explorer</h3>
             </div>
-            <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <label className="block text-xs font-medium text-gray-500 uppercase mb-1">Base URL</label>
                 <div className="flex items-center gap-2">

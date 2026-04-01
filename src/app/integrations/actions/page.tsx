@@ -226,7 +226,7 @@ export default function IntegrationActionsPage() {
       </div>
 
       {/* Action Cards */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         {actions.map((action, i) => (
           <motion.button
             key={action.id}
@@ -496,7 +496,7 @@ export default function IntegrationActionsPage() {
 
                 {hrResult && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                    <div className="grid grid-cols-4 gap-3 mb-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                       <div className="p-3 bg-blue-50 rounded-xl text-center"><p className="text-xl font-bold text-blue-600">{hrResult.synced}</p><p className="text-xs text-blue-700">Total Synced</p></div>
                       <div className="p-3 bg-green-50 rounded-xl text-center"><p className="text-xl font-bold text-green-600">{hrResult.added}</p><p className="text-xs text-green-700">New Added</p></div>
                       <div className="p-3 bg-yellow-50 rounded-xl text-center"><p className="text-xl font-bold text-yellow-600">{hrResult.updated}</p><p className="text-xs text-yellow-700">Updated</p></div>

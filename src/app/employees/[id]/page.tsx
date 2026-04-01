@@ -35,7 +35,7 @@ export default function EmployeeProfile({ params }: { params: Promise<{ id: stri
         }`}>{emp.status}</span>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3">
           <div className="p-2.5 bg-blue-50 rounded-lg"><Mail size={18} className="text-blue-600" /></div>
           <div><p className="text-xs text-gray-500">Email</p><p className="text-sm font-medium text-gray-800 truncate">{emp.email}</p></div>
@@ -137,6 +137,7 @@ export default function EmployeeProfile({ params }: { params: Promise<{ id: stri
           {activeTab === 4 && (
             <div>
               <h3 className="text-sm font-semibold text-gray-700 mb-4">Recent Payroll History</h3>
+              <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200">
@@ -159,6 +160,7 @@ export default function EmployeeProfile({ params }: { params: Promise<{ id: stri
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
           )}
         </div>

@@ -55,7 +55,7 @@ export default function PAYEReportPage() {
         >Print PDF</button>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
           <p className="text-xs text-gray-500">Total PAYE Tax</p>
           <p className="text-2xl font-bold text-gray-900 mt-1">{formatGHS(totalPAYE)}</p>

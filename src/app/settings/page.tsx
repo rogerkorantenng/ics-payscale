@@ -35,13 +35,14 @@ export default function SettingsPage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* PAYE Tax Table */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <div className="flex items-center gap-3 mb-4">
             <DollarSign size={20} className="text-[#0B2545]" />
             <h3 className="font-semibold text-gray-900">Ghana PAYE Tax Brackets (Monthly)</h3>
           </div>
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead><tr className="border-b border-gray-200"><th className="text-left px-3 py-2 text-xs font-semibold text-gray-500">Range</th><th className="text-right px-3 py-2 text-xs font-semibold text-gray-500">Rate</th></tr></thead>
             <tbody>
@@ -53,6 +54,7 @@ export default function SettingsPage() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
 
         {/* Statutory Rates */}
@@ -89,7 +91,7 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* Campus Management */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <div className="flex items-center gap-3 mb-4">
@@ -135,6 +137,7 @@ export default function SettingsPage() {
           <Users size={20} className="text-[#0B2545]" />
           <h3 className="font-semibold text-gray-900">Pay Grades & Allowance Types</h3>
         </div>
+        <div className="overflow-x-auto">
         <table className="w-full">
           <thead><tr className="border-b border-gray-200"><th className="text-left px-4 py-2.5 text-xs font-semibold text-gray-500 uppercase">Grade</th><th className="text-left px-4 py-2.5 text-xs font-semibold text-gray-500 uppercase">Title</th><th className="text-right px-4 py-2.5 text-xs font-semibold text-gray-500 uppercase">Salary Range</th></tr></thead>
           <tbody>
@@ -147,6 +150,7 @@ export default function SettingsPage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div></PageTransition>
   );

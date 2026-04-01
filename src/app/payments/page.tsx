@@ -136,6 +136,7 @@ export default function PaymentsPage() {
 
       {activeTab === "history" && (
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
@@ -160,13 +161,14 @@ export default function PaymentsPage() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
 
       {activeTab === "new" && (
         <>
           {/* Summary Cards */}
-          <div className="grid grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 }} className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 bg-[#0B2545]/10 rounded-xl"><CreditCard size={20} className="text-[#0B2545]" /></div>

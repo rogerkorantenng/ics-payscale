@@ -58,14 +58,14 @@ export default function LeavePage() {
         <p className="text-sm text-gray-500 mt-1">Manage leave requests and track attendance</p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center shadow-sm"><p className="text-3xl font-bold text-orange-600">{pendingCount}</p><p className="text-xs text-gray-500 mt-1">Pending Approvals</p></div>
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center shadow-sm"><p className="text-3xl font-bold text-green-600">{approvedCount}</p><p className="text-xs text-gray-500 mt-1">Approved</p></div>
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center shadow-sm"><p className="text-3xl font-bold text-blue-600">8</p><p className="text-xs text-gray-500 mt-1">On Leave Today</p></div>
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center shadow-sm"><p className="text-3xl font-bold text-[#0B2545]">96%</p><p className="text-xs text-gray-500 mt-1">Attendance Rate</p></div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
           <h3 className="font-semibold text-gray-900 mb-4">Leave Requests</h3>
           <div className="space-y-3">
@@ -99,6 +99,7 @@ export default function LeavePage() {
 
         <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
           <h3 className="font-semibold text-gray-900 mb-4">Leave Balance Summary (Avg. per Employee)</h3>
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead><tr className="border-b border-gray-200"><th className="text-left px-3 py-2 text-xs font-semibold text-gray-500 uppercase">Type</th><th className="text-right px-3 py-2 text-xs font-semibold text-gray-500 uppercase">Entitled</th><th className="text-right px-3 py-2 text-xs font-semibold text-gray-500 uppercase">Used</th><th className="text-right px-3 py-2 text-xs font-semibold text-gray-500 uppercase">Remaining</th></tr></thead>
             <tbody>
@@ -112,6 +113,7 @@ export default function LeavePage() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
 

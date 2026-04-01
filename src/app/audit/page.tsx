@@ -30,7 +30,7 @@ export default function AuditPage() {
       </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div className="bg-white border border-gray-200 rounded-xl p-5 flex items-center gap-4">
           <div className="p-3 bg-green-50 rounded-lg"><Shield size={24} className="text-green-600" /></div>
           <div><p className="text-sm font-semibold text-gray-900">Data Encryption</p><p className="text-xs text-green-600 font-medium flex items-center gap-1"><CheckCircle size={12} /> AES-256 Active</p></div>
@@ -50,6 +50,7 @@ export default function AuditPage() {
           <h3 className="font-semibold text-gray-900">Activity Log</h3>
           <span className="text-xs text-gray-500">{auditLog.length} recent entries</span>
         </div>
+        <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
@@ -74,6 +75,7 @@ export default function AuditPage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div></PageTransition>
   );

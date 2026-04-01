@@ -40,7 +40,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Campus Comparison Cards */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         {campusComparison.map((c) => (
           <div key={c.campus} className="bg-white rounded-xl border border-gray-200 p-5">
             <div className="flex items-center justify-between mb-3">
@@ -56,7 +56,7 @@ export default function AnalyticsPage() {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* Headcount Trends */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="font-semibold text-gray-900 mb-4">Headcount Trends (12 Months)</h3>
@@ -91,7 +91,7 @@ export default function AnalyticsPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Staff Distribution */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="font-semibold text-gray-900 mb-4">Staff by Role Type</h3>
@@ -106,8 +106,9 @@ export default function AnalyticsPage() {
         </div>
 
         {/* Cost of Living Comparison */}
-        <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-5">
+        <div className="col-span-1 md:col-span-2 bg-white rounded-xl border border-gray-200 p-5">
           <h3 className="font-semibold text-gray-900 mb-4">Cost-of-Living Adjustment Comparison</h3>
+          <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
@@ -125,6 +126,7 @@ export default function AnalyticsPage() {
               <tr><td className="px-4 py-3 text-sm font-medium">Total Payroll / Headcount</td><td className="px-4 py-3 text-sm text-right font-semibold">{formatGHS(Math.round(pakyiSummary.totalGross / pakyiSummary.totalEmployees))}</td><td className="px-4 py-3 text-sm text-right font-semibold">{formatGHS(Math.round(ogbojoSummary.totalGross / ogbojoSummary.totalEmployees))}</td><td className="px-4 py-3 text-sm text-right font-semibold">{formatGHS(Math.round(eastLegonSummary.totalGross / eastLegonSummary.totalEmployees))}</td></tr>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div></PageTransition>

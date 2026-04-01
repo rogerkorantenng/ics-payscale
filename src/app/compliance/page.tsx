@@ -24,7 +24,7 @@ export default function CompliancePage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
           <div className="flex items-center gap-3 mb-2">
             <AlertTriangle size={20} className="text-orange-600" />
@@ -51,7 +51,7 @@ export default function CompliancePage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <Link href="/compliance/ssnit" className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2.5 bg-[#0B2545]/10 rounded-lg"><ShieldCheck size={20} className="text-[#0B2545]" /></div>
@@ -79,6 +79,7 @@ export default function CompliancePage() {
         <div className="px-5 py-4 border-b border-gray-200">
           <h3 className="font-semibold text-gray-900">All Filings</h3>
         </div>
+        <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
@@ -113,6 +114,7 @@ export default function CompliancePage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div></PageTransition>
   );

@@ -36,7 +36,7 @@ export default function PensionReportPage() {
         <button onClick={handleExport} className="flex items-center gap-2 bg-gradient-to-r from-[#0B2545] to-[#1a4a7a] text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:shadow-lg transition-all active:scale-[0.98]"><Download size={16} /> Export CSV</button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm"><p className="text-xs text-gray-500">Tier 2 Mandatory (5% Employer)</p><p className="text-2xl font-bold text-gray-900 mt-1">{formatGHS(totalTier2)}</p><p className="text-xs text-gray-500 mt-1">{activeEmployees.length} employees</p></div>
         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm"><p className="text-xs text-gray-500">Tier 3 Voluntary (5%)</p><p className="text-2xl font-bold text-gray-900 mt-1">{formatGHS(totalTier3)}</p><p className="text-xs text-gray-500 mt-1">{tier3Employees.length} enrolled</p></div>
         <div className="bg-[#0B2545]/5 border border-[#0B2545]/20 rounded-xl p-5"><p className="text-xs text-gray-500">Total Pension</p><p className="text-2xl font-bold text-[#0B2545] mt-1">{formatGHS(totalTier2 + totalTier3)}</p></div>

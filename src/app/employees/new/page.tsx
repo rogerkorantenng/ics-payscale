@@ -22,7 +22,7 @@ export default function NewEmployeePage() {
 
       <div className="bg-white rounded-xl border border-gray-200 p-6 max-w-3xl">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Personal Information</h2>
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div><label className="block text-sm font-medium text-gray-700 mb-1">First Name</label><input type="text" className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20" placeholder="Enter first name" /></div>
           <div><label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label><input type="text" className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20" placeholder="Enter last name" /></div>
           <div><label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label><input type="email" className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20" placeholder="email@icsghana.info" /></div>
@@ -32,7 +32,7 @@ export default function NewEmployeePage() {
         </div>
 
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Employment Details</h2>
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Campus</label>
             <select className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20">
@@ -54,7 +54,7 @@ export default function NewEmployeePage() {
         </div>
 
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Salary Information</h2>
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div><label className="block text-sm font-medium text-gray-700 mb-1">Basic Salary (GH₵)</label><input type="number" className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20" placeholder="0.00" /></div>
           <div><label className="block text-sm font-medium text-gray-700 mb-1">Housing Allowance (GH₵)</label><input type="number" className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20" placeholder="0.00" /></div>
           <div><label className="block text-sm font-medium text-gray-700 mb-1">Transport Allowance (GH₵)</label><input type="number" className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0B2545]/20" placeholder="0.00" /></div>

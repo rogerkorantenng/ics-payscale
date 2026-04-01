@@ -44,6 +44,7 @@ export default function PayrollPage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+        <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
@@ -93,6 +94,7 @@ export default function PayrollPage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
 
       {/* Detail Modal */}
